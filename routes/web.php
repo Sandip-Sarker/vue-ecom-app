@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\DashboardController;
 
-Route::get('/', function () {
-    return inertia('Home');
-});
+Route::get('/', [DashboardController::class, 'index']);
